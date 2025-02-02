@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Metadata for my event landing page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Osheaga event description.">
+    <meta name="author" content="David Demers">
+    <meta name="keywords" content="Montreal, MTL, Mtl, mtl, Events, events, Event, event, 
+			Festival, festival, Osheaga, osheaga, Music, music" >
+    <title>Osheaga Info Page</title>
+	<!-- Linking Stylesheets -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+	<!-- Nav Bar -->
+	<nav id="top-nav" class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!-- Header -->
+			<header id="header" class="navbar-brand">
+				<h1>Osheaga 2024</h1>
+			</header>
+			
+			<!-- landing page navigation options -->
+			<ul id="nav-options" class="nav navbar-nav navbar-right">
+				<li class="nav-item">
+					<a class="nav-link" href="Osheaga_home.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Osheaga_schedule.html">Schedule</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Osheaga_artists.html">Artists</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Osheaga_register.html">Register</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Osheaga_contact.html">Contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../french/Osheaga_home.html">Français</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<!-- Main section -->
+	<main class="home">
+		<!-- Event overview -->
+        <section class="about">
+			<img id="banner" src="../medias/osheaga_banner.jpeg" alt="Osheaga 2024 banner">
+			
+			<div id="description">
+				<h2>Welcome to Osheaga 2024</h2>
+				<p>Dive into the heart of Montreal&apos;s vibrant music scene at <b>Osheaga</b>, one of Canada&apos;s premier music and arts festivals! 
+					Held every summer at Parc Jean-Drapeau, this three-day event brings together a stellar lineup of international headliners, rising stars, and eclectic genres, from indie and pop to hip-hop and electronic.
+				<br>Beyond the music, Osheaga offers an unforgettable experience with stunning outdoor stages, delicious food trucks, captivating art installations, and the electric energy of festivalgoers from around the globe.
+				<br><b>Don&apos;t miss out!</b> <a href="Osheaga_register.html">Book your tickets now</a> and make memories that will last a lifetime.</p>
+			</div>
+		</section>
+
+		<!-- Bottom section with two pieces of media -->
+		<section class="medias">
+			<!-- Event location, using google maps geolocation -->
+			<div id="location">
+				<h2>Event Location</h2>
+				<a href="https://www.google.ca/maps/place/Parc+Jean-Drapeau/@45.5139989,-73.5364109,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91b03473b92c9:0x46e7ac7562cb8303!8m2!3d45.5139952!4d-73.5338306!16s%2Fm%2F026bqmf?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Parc Jean-Drapeau, Montreal, Canada</a>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.8052478974078!2d-73.5364108876856!3d45.51399892999339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91b03473b92c9%3A0x46e7ac7562cb8303!2sParc%20Jean-Drapeau!5e0!3m2!1sen!2sca!4v1736201221184!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+
+			<!-- Event video -->
+			<div id="preview">
+				<h2>What to Expect</h2>
+				<video controls>
+					<source src="../medias/osheaga_promo.mp4" type="video/mp4">
+				</video>
+			</div>
+		</section>
+    </main>
+
+	<!-- Footer section -->
+    <footer class="footer">
+        <p>&copy; 2024 Osheaga. All Rights Reserved.</p>
+    </footer>
+</body>

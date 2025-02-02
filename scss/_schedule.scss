@@ -1,0 +1,184 @@
+/* Setting the width of entire page and grid layout */
+.schedule {
+    @include grid-center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+
+    @media (max-width: 1024px) {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    @media (max-width: 400px) {
+        @include flex-center;
+        flex-direction: column;
+    }
+}
+
+/* Styling left side of the page */
+#left-side {
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+#left-side #banner {
+    width: 80%;
+    height: 44.2%;
+}
+#left-side #small-img img {
+    width: 80%;
+    height: 57.76%;
+}
+
+/* Styling second item in the grid box on left-side */
+#small-img, #hidden-small-img {
+    cursor: pointer;
+    margin-top: 3rem;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+#small-img img, #hidden-small-img img {
+    border: 2px solid #404040;
+    border-radius: 0.5rem;
+}
+#small-img a, #hidden-small-img a {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Styling the right-side of the page*/
+#right-side {
+    @include flex-center;
+    flex-direction: column;
+    color: black;
+    margin-top: 2rem;
+
+    @media (max-width: 1024px) {
+        margin-top: 0rem;
+    }
+}
+#right-side #hidden-small-img {
+    display: none;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        text-align: center;
+    }
+}
+
+/* Styling the selection area and the buttons */
+#select-area {
+    @include flex-center;
+    @include smt-margin;
+    @include smw-padding;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    font-size: large;
+}
+#select-area label {
+    @include bubble;
+    cursor:pointer;
+    color:#000;
+    margin:0.15rem;
+    padding:0.6rem;
+    float:left;
+    text-align:center;
+}
+#select-area label:hover {
+    color:#EDEADE;
+}
+#select-area input {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Styling the schedule images and making the changing ones invisible */
+#day-schedules * {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#day-schedules img {
+    margin-top: 4%;
+    width: 90%;
+    height: 90%;
+    border: 2px solid #404040;
+    border-radius: 0.5rem;
+}
+#day0-schedule {
+    display: flex;
+}
+.interactive-img {
+    display: none;
+}
+
+
+/* Changing schedule images when radio button is checked */
+input#friday:checked ~ #day-schedules #day1-schedule {
+    display: flex;
+}
+input#saturday:checked ~ #day-schedules #day2-schedule {
+    display: flex;
+}
+input#sunday:checked ~ #day-schedules #day3-schedule {
+    display: flex;
+}
+
+/* Making the default schedule disappear when the user changes days */
+input#friday:checked ~ #day-schedules #day0-schedule {
+    display: none;
+}
+input#saturday:checked ~ #day-schedules #day0-schedule {
+    display: none;
+}
+input#sunday:checked ~ #day-schedules #day0-schedule {
+    display: none;
+}
+
+
+/* Changing the friday button's color on check and uncheck */
+input#friday:checked ~ #friday-btn {
+    background-color:$third-color;
+}
+input#saturday:checked ~ #friday-btn {
+    background-color:$primary-color;
+}
+input#sunday:checked ~ #friday-btn {
+    background-color:$primary-color;
+}
+
+/* Changing the saturday button's color on check and uncheck */
+input#saturday:checked ~ #saturday-btn {
+    background-color:$third-color;
+}
+input#friday:checked ~ #saturday-btn {
+    background-color:$primary-color;
+}
+input#sunday:checked ~ #saturday-btn {
+    background-color:$primary-color;
+}
+
+/* Changing the sunday button's color on check / uncheck */
+input#sunday:checked ~ #sunday-btn {
+    background-color:$third-color;
+}
+input#friday:checked ~ #sunday-btn {
+    background-color:$primary-color;
+}
+input#saturday:checked ~ #sunday-btn {
+    background-color:$primary-color;
+}

@@ -1,0 +1,684 @@
+/* main colors */
+/* Mixin to set content to flex and center it */
+/* Mixin to set content to grid and center it */
+/* Mixin for a simple blue cornered item */
+/* Mixins for banner ratio size */
+/* Margin and padding mixins to quickly and easily set them */
+/* smt: small tall, smw: small wide, md: medium, lg: large */
+/* Default footer style for each page */
+.footer {
+  background-color: #D49ACB;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  font-size: large;
+  padding-left: 0.4rem;
+}
+
+/* Making the forms a grid box */
+#register-form, #contact-form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #56B5FA;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  text-align: right;
+}
+
+/* Styling the form child elements to be more visible */
+#register-form button, #contact-form button {
+  color: black;
+  background-color: #D49ACB;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.4rem;
+  margin: auto;
+  margin-top: 0.5%;
+}
+
+#register-form select, #contact-form select, #register-form input, #contact-form input {
+  color: black;
+}
+
+::-moz-placeholder {
+  color: #909090;
+}
+
+::placeholder {
+  color: #909090;
+}
+
+#register-form *, #contact-form * {
+  margin: 1rem 0.25rem;
+}
+
+option {
+  color: #909090;
+}
+
+/* Setting color for navbar */
+#top-nav {
+  background-color: #56B5FA;
+}
+
+/* Overriding bootstrap stlying for header */
+#header {
+  padding-left: 1rem;
+  color: #333333;
+}
+
+/* Overriding bootstrap to make the nav-options in a row */
+#nav-options {
+  flex-direction: row;
+  float: right;
+}
+
+/* Overriding bootstrap to change the text color and distance between links */
+.nav-link {
+  margin: 0rem 0.4rem;
+  padding: 0.2rem 0.4rem;
+  color: #333333;
+  border: 2px solid #56B5FA;
+  border-radius: 0.5rem;
+}
+
+.nav-link:hover {
+  border: 2px solid #333333;
+  color: white;
+  background-color: #D49ACB;
+}
+
+/* centering the div with the large schedule image */
+.big-schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 1.5%;
+  margin-bottom: 4.5%;
+}
+
+/* making the size of the schedule img resizable */
+.big-schedule img {
+  width: 80%;
+  height: 80%;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+}
+
+/* Centering main section and setting width */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+/* Styling top section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.about img {
+  width: 51.6%;
+  height: 28.5%;
+}
+
+/* Styling the descriptive paragraph */
+#description {
+  background-color: #56B5FA;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 1.5rem 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#description p {
+  font-size: large;
+}
+
+#description a {
+  color: #333333;
+}
+
+/* Making the bottom part of the page flex centered */
+.medias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+@media (max-width: 400px) {
+  .medias {
+    flex-direction: column;
+  }
+}
+
+/* Styling the location section for the event */
+#location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #56B5FA;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+  margin: 3rem 1.5rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 30rem;
+  height: 22.25rem;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  #location {
+    height: 22rem;
+  }
+}
+@media (max-width: 400px) {
+  #location {
+    padding-bottom: 0rem;
+  }
+}
+
+#location iframe {
+  width: 70%;
+  height: 70%;
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  #location iframe {
+    height: 60%;
+  }
+}
+
+#location a {
+  color: #333333;
+}
+
+/* Styling the video preview section */
+#preview {
+  background-color: #56B5FA;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+  margin: 3rem 1.5rem;
+  padding: 1.5rem;
+  width: 30rem;
+  height: 22.25rem;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  #preview {
+    height: 22rem;
+  }
+}
+@media (max-width: 400px) {
+  #preview {
+    margin-top: 0rem;
+  }
+}
+
+#preview video {
+  margin-top: 2rem;
+  width: 80%;
+}
+@media (max-width: 1024px) {
+  #preview video {
+    margin-top: 3rem;
+    width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  #preview video {
+    margin-top: 1rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #preview h2 {
+    margin-top: 1rem;
+  }
+}
+
+/* Setting the width of entire page and grid layout */
+.schedule {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+}
+@media (max-width: 1024px) {
+  .schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* Styling left side of the page */
+#left-side {
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+#left-side #banner {
+  width: 80%;
+  height: 44.2%;
+}
+
+#left-side #small-img img {
+  width: 80%;
+  height: 57.76%;
+}
+
+/* Styling second item in the grid box on left-side */
+#small-img, #hidden-small-img {
+  cursor: pointer;
+  margin-top: 3rem;
+  grid-template-columns: 2;
+  grid-template-rows: 1;
+}
+@media (max-width: 1024px) {
+  #small-img, #hidden-small-img {
+    display: none;
+  }
+}
+
+#small-img img, #hidden-small-img img {
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+}
+
+#small-img a, #hidden-small-img a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Styling the right-side of the page*/
+#right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  margin-top: 2rem;
+}
+@media (max-width: 1024px) {
+  #right-side {
+    margin-top: 0rem;
+  }
+}
+
+#right-side #hidden-small-img {
+  display: none;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1024px) {
+  #right-side #hidden-small-img {
+    display: flex;
+    text-align: center;
+  }
+}
+
+/* Styling the selection area and the buttons */
+#select-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 1rem;
+  padding: 1rem 1.5rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  font-size: large;
+}
+
+#select-area label {
+  background-color: #56B5FA;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #000;
+  margin: 0.15rem;
+  padding: 0.6rem;
+  float: left;
+  text-align: center;
+}
+
+#select-area label:hover {
+  color: #EDEADE;
+}
+
+#select-area input {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Styling the schedule images and making the changing ones invisible */
+#day-schedules * {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#day-schedules img {
+  margin-top: 4%;
+  width: 90%;
+  height: 90%;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+}
+
+#day0-schedule {
+  display: flex;
+}
+
+.interactive-img {
+  display: none;
+}
+
+/* Changing schedule images when radio button is checked */
+input#friday:checked ~ #day-schedules #day1-schedule {
+  display: flex;
+}
+
+input#saturday:checked ~ #day-schedules #day2-schedule {
+  display: flex;
+}
+
+input#sunday:checked ~ #day-schedules #day3-schedule {
+  display: flex;
+}
+
+/* Making the default schedule disappear when the user changes days */
+input#friday:checked ~ #day-schedules #day0-schedule {
+  display: none;
+}
+
+input#saturday:checked ~ #day-schedules #day0-schedule {
+  display: none;
+}
+
+input#sunday:checked ~ #day-schedules #day0-schedule {
+  display: none;
+}
+
+/* Changing the friday button's color on check and uncheck */
+input#friday:checked ~ #friday-btn {
+  background-color: #D49ACB;
+}
+
+input#saturday:checked ~ #friday-btn {
+  background-color: #56B5FA;
+}
+
+input#sunday:checked ~ #friday-btn {
+  background-color: #56B5FA;
+}
+
+/* Changing the saturday button's color on check and uncheck */
+input#saturday:checked ~ #saturday-btn {
+  background-color: #D49ACB;
+}
+
+input#friday:checked ~ #saturday-btn {
+  background-color: #56B5FA;
+}
+
+input#sunday:checked ~ #saturday-btn {
+  background-color: #56B5FA;
+}
+
+/* Changing the sunday button's color on check / uncheck */
+input#sunday:checked ~ #sunday-btn {
+  background-color: #D49ACB;
+}
+
+input#friday:checked ~ #sunday-btn {
+  background-color: #56B5FA;
+}
+
+input#saturday:checked ~ #sunday-btn {
+  background-color: #56B5FA;
+}
+
+/* Setting width of entire page and grid layout */
+.artists-page {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3%;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1200px) {
+  .artists-page {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .artists-page img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+}
+
+/* Styling the artists lineup area */
+#artists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+@media (max-width: 1200px) {
+  #artists {
+    margin-top: 2rem;
+  }
+}
+
+/* Styling the divs with the artists names */
+#artist-lineup div {
+  padding: 1rem 1.5rem;
+  margin: 1rem 1.5rem;
+  background-color: #56B5FA;
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Styling the main section of the register page */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-left: 15%;
+  text-align: center;
+}
+@media (max-width: 950px) {
+  .register-page {
+    flex-direction: column;
+    margin-left: 0%;
+  }
+}
+
+/* Resizable banner img */
+.register-page img {
+  width: 35%;
+  height: 19.34%;
+}
+@media (max-width: 950px) {
+  .register-page img {
+    margin-top: 3%;
+  }
+}
+
+/* Responsive margin change for switching to flex column */
+@media (max-width: 950px) {
+  #register {
+    margin-top: 6%;
+  }
+}
+
+/* Setting resizable width of form */
+#register-form {
+  width: 60%;
+}
+
+/* centering form submit button */
+#register-form button {
+  grid-column: 1/span 2;
+}
+
+/* styling payment section of the form */
+#payment-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+
+#payment-type input {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+#payment-type label img {
+  width: 90%;
+}
+
+#payment-type label :hover {
+  cursor: pointer;
+}
+
+#payment-type input:checked + label img {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 2rem;
+}
+
+/* Styling the main section of the contact page */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  text-align: center;
+}
+@media (max-width: 950px) {
+  .contact-page {
+    flex-direction: column;
+    margin-left: 0%;
+  }
+}
+
+/* Resizable banner img */
+.contact-page img {
+  width: 35%;
+  height: 19.34%;
+}
+@media (max-width: 950px) {
+  .contact-page img {
+    margin-top: 3%;
+  }
+}
+
+/* Responsive margin change for switching to flex column */
+@media (max-width: 950px) {
+  #contact {
+    margin-top: 6%;
+  }
+}
+
+/* Setting resizable width of form */
+#contact-form {
+  width: 80%;
+}
+
+/* centering form submit button */
+#contact-form button {
+  grid-column: 1/span 2;
+}
+
+/* Setting the default background color for all pages */
+body {
+  background-image: linear-gradient(90deg, #53b2ed, #F3BA5C, #D49ACB);
+}
+
+/* Setting the default text color and size for all pages */
+* {
+  color: #333333;
+  font-size: 18px;
+}
+@media (max-width: 1024px) {
+  * {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  * {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  * {
+    font-size: 12px;
+  }
+}
+
+/* Setting border-radius for images */
+#banner {
+  border: 2px solid #404040;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,41 @@
+/* Setting width of entire page and grid layout */
+.artists-page {
+    @include grid-center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3%;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.artists-page img {
+    @media (max-width: 1200px) {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3rem;
+    }
+}
+
+
+/* Styling the artists lineup area */
+#artists {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    @media (max-width: 1200px) {
+        margin-top: 2rem;
+    }
+}
+
+
+/* Styling the divs with the artists names */
+#artist-lineup div {
+    @include smw-padding;
+    @include smw-margin;
+    @include bubble;
+    text-align: center;
+}

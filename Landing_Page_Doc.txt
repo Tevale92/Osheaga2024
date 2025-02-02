@@ -1,0 +1,80 @@
+Purpose:
+
+The purpose of this event landing page was to give people information on the Osheaga 2024 event, a very popular music and art festival which attracts young people from around the world, and hopefully entice them to buy some tickets.
+The event takes place over several days, so my page shows users the schedule for each day of the event.
+I also displayed the full list of artists separately from the schedule so people could look at the list of artists in an easier way than looking at the schedule.
+The landing page gives a brief description of the event and shows the event location as well as a promotional video for the event.
+As mentioned the goal of the website is to entice the user to get tickets, so I made a registration page where I mimic buying tickets for the event.
+That being said I did not use any javascript and thus did not display the price or proper input validation, only regex pattern attributes in the html elements.
+
+Extra info:
+
+The landing page and schedule page have links to the tickets page embedded in advertising elements.
+The schedule pictures are clickable and bring the user to a page with only the schedule so the user can better see the schedule.
+There is a contact page for the user to submit a message to the event organizers.
+All pages are fully resizable for all pixel widths and I accomplish this by using percentages for widths and height as well as media queries which change elements from flex-row to flex-column and add/subtract margin/padding;
+Every page on the website can be translated to french.
+
+Copyright:
+
+For this website I used media content from the official Osheaga page, many other websites have used their images and videos so I believe these are free to use for the public.
+I also used the google maps embed a link feature to embed the event location.
+Lastly I used svgrepo.com to get the icons for the payment methods.
+
+File Structure :
+
+////////css
+	----main.css
+	----main.css.map
+////////english
+	----Osheaga_artists.html
+	----Osheaga_contact.html
+	----Osheaga_friday.html
+	----Osheaga_home.html
+	----Osheaga_register.html
+	----Osheaga_saturday.html
+	----Osheaga_schedule.html
+	----Osheaga_sunday.html
+////////french
+	----Osheaga_artists.html
+	----Osheaga_contact.html
+	----Osheaga_friday.html
+	----Osheaga_home.html
+	----Osheaga_register.html
+	----Osheaga_saturday.html
+	----Osheaga_schedule.html
+	----Osheaga_sunday.html
+////////medias
+	----american-express.svg
+	----day1_schedule.jpg
+	----day2_schedule.jpg
+	----day3_schedule.jpg
+	----festival_pic.jpeg
+	----mastercard.svg
+	----osheaga_banner.jpeg
+	----osheaga_promo.mp4
+	----visa.svg
+////////scss
+	----_artists.scss
+	----_big-schedule.scss
+	----_contact.scss
+	----_footer.scss
+	----_form.scss
+	----_home.scss
+	----_mixins.scss
+	----_navbar.scss
+	----_register.scss
+	----_schedule.scss
+	----_variables.scss
+	----main.scss
+////////Wireframe v4(Desktop and Mobile)
+	----desktop_artists.png
+	----desktop_contact.png
+	----desktop_home.png
+	----desktop_register.png
+	----desktop_schedule.png
+	----mobile_artists.png
+	----mobile_contact.png
+	----mobile_home.png
+	----mobile_register.png
+	----mobile_contact.png

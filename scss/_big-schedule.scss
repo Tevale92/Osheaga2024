@@ -1,0 +1,14 @@
+/* centering the div with the large schedule image */
+.big-schedule {
+    @include flex-center;
+    margin: 3% 1.5%;
+    margin-bottom: 4.5%;
+}
+
+/* making the size of the schedule img resizable */
+.big-schedule img{
+    width: 80%;
+    height: 80%;
+    border: 2px solid #404040;
+    border-radius: 0.5rem;
+}

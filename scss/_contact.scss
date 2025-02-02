@@ -1,0 +1,38 @@
+/* Styling the main section of the contact page */
+.contact-page {
+    @include flex-center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    text-align: center;
+
+    @media (max-width: 950px) {
+        flex-direction: column;
+        margin-left: 0%;
+    }
+}
+/* Resizable banner img */
+.contact-page img {
+    width: 35%;
+    height: 19.34%;
+
+    @media (max-width: 950px) {
+        margin-top: 3%;
+    }
+}
+
+/* Responsive margin change for switching to flex column */
+#contact {
+    @media (max-width: 950px) {
+        margin-top: 6%;
+    }
+}
+
+/* Setting resizable width of form */
+#contact-form {
+    width: 80%;
+}
+/* centering form submit button */
+#contact-form button {
+    grid-column: 1 / span 2;
+}

@@ -1,0 +1,4 @@
+tickets purchasing form with input validation
+navbar hamburger dropdown
+artist lineup onclick change
+event schedule onclick change

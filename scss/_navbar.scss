@@ -1,0 +1,30 @@
+/* Setting color for navbar */
+#top-nav {
+    background-color: $primary-color;
+}
+
+/* Overriding bootstrap stlying for header */
+#header {
+    padding-left: 1rem;
+    color: #333333;
+}
+
+/* Overriding bootstrap to make the nav-options in a row */
+#nav-options {
+    flex-direction: row;
+    float: right;
+}
+
+/* Overriding bootstrap to change the text color and distance between links */
+.nav-link {
+    margin: 0rem 0.4rem;
+    padding: 0.2rem 0.4rem;
+    color: #333333;
+    border: 2px solid $primary-color;
+    border-radius: 0.5rem;
+}
+.nav-link:hover {
+    border: 2px solid #333333;
+    color: white;
+    background-color: $third-color;
+}

@@ -1,0 +1,34 @@
+/* Making the forms a grid box */
+#register-form, #contact-form {
+    @include grid-center;
+    @include bubble;
+    @include smw-padding;
+    @include smt-margin;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    text-align: right;
+}
+
+/* Styling the form child elements to be more visible */
+#register-form button, #contact-form button {
+    color: black;
+    background-color: $third-color;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.4rem;
+    margin: auto;
+    margin-top: 0.5%;
+}
+#register-form select, #contact-form select, #register-form input, #contact-form input {
+    color: black;
+}
+::placeholder {
+    color: #909090;
+}
+#register-form *, #contact-form * {
+    margin: 1rem 0.25rem;
+}
+option {
+    color: #909090;
+}
