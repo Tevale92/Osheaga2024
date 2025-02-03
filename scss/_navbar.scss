@@ -28,3 +28,12 @@
     color: white;
     background-color: $third-color;
 }
+
+/* style for disabled link which is the current page */
+.disable-link {
+    pointer-events: none;
+    cursor: default;
+    border: 2px solid #333333;
+    color: white;
+    background-color: $third-color;
+}

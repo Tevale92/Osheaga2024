@@ -96,6 +96,15 @@ option {
   background-color: #D49ACB;
 }
 
+/* style for disabled link which is the current page */
+.disable-link {
+  pointer-events: none;
+  cursor: default;
+  border: 2px solid #333333;
+  color: white;
+  background-color: #D49ACB;
+}
+
 /* centering the div with the large schedule image */
 .big-schedule {
   display: flex;
@@ -512,7 +521,7 @@ input#saturday:checked ~ #sunday-btn {
 }
 
 /* Styling the artists lineup area */
-#artists {
+#artist {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,7 +529,7 @@ input#saturday:checked ~ #sunday-btn {
   margin-top: 5%;
 }
 @media (max-width: 1200px) {
-  #artists {
+  #artist {
     margin-top: 2rem;
   }
 }

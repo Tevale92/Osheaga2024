@@ -31,7 +31,7 @@ document.getElementById("previous").addEventListener("click", () => nextDay(fals
 
 // function to change days, next day if true and previous day if false
 function nextDay (bool) {
-    let day = parseInt(window.localStorage.getItem("day"));
+    let day = window.localStorage.getItem("day");
 
     if (bool) {
         if (day < 3) {
@@ -58,4 +58,4 @@ function updateArtists (day) {
 }
 
 // initializing the page with the first day's artists
-updateArtists(parseInt(window.localStorage.getItem("day"), 10));
+updateArtists(window.localStorage.getItem("day"));
