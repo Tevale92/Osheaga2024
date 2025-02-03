@@ -3,6 +3,7 @@
     @include grid-center;
     width: 90%;
     margin: auto;
+    margin-top: 5%;
     margin-bottom: 3%;
     grid-template-columns: repeat(2, 1fr);
 
@@ -11,11 +12,13 @@
     }
 }
 .artists-page img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
     @media (max-width: 1200px) {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 3rem;
+        width: 60%;
     }
 }
 
@@ -24,7 +27,7 @@
 #artists {
     @include flex-center;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 5%;
 
     @media (max-width: 1200px) {
         margin-top: 2rem;
@@ -33,9 +36,13 @@
 
 
 /* Styling the divs with the artists names */
-#artist-lineup div {
+#artist-names {
     @include smw-padding;
     @include smw-margin;
     @include bubble;
     text-align: center;
+}
+#artist-names p {
+    margin-top: 0.3rem;
+    line-height: 1.6;
 }

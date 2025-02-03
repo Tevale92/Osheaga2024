@@ -489,6 +489,7 @@ input#saturday:checked ~ #sunday-btn {
   align-items: center;
   width: 90%;
   margin: auto;
+  margin-top: 5%;
   margin-bottom: 3%;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -498,12 +499,15 @@ input#saturday:checked ~ #sunday-btn {
   }
 }
 
+.artists-page img {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
 @media (max-width: 1200px) {
   .artists-page img {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
+    width: 60%;
   }
 }
 
@@ -513,7 +517,7 @@ input#saturday:checked ~ #sunday-btn {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 5%;
 }
 @media (max-width: 1200px) {
   #artists {
@@ -522,13 +526,18 @@ input#saturday:checked ~ #sunday-btn {
 }
 
 /* Styling the divs with the artists names */
-#artist-lineup div {
+#artist-names {
   padding: 1rem 1.5rem;
   margin: 1rem 1.5rem;
   background-color: #56B5FA;
   border: 2px solid #404040;
   border-radius: 0.5rem;
   text-align: center;
+}
+
+#artist-names p {
+  margin-top: 0.3rem;
+  line-height: 1.6;
 }
 
 /* Styling the main section of the register page */
