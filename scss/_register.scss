@@ -22,7 +22,8 @@
 }
 
 /* Responsive margin change for switching to flex column */
-#register {
+#register-area {
+    width: 50%;
     @media (max-width: 950px) {
         margin-top: 6%;
     }
@@ -35,28 +36,4 @@
 /* centering form submit button */
 #register-form button {
     grid-column: 1 / span 2;
-}
-
-/* styling payment section of the form */
-#payment-type {
-    @include flex-center;
-    text-align: center;
-    margin: 0;
-}
-#payment-type input {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: -9999px;
-}
-#payment-type label img {
-    width: 90%;
-}
-#payment-type label :hover {
-    cursor: pointer;
-}
-#payment-type input:checked + label img {
-    background-color: black;
-    border: 2px solid black;
-    border-radius: 2rem;
 }

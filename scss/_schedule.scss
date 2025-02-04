@@ -107,7 +107,7 @@
 }
 
 /* Styling the schedule images and making the changing ones invisible */
-#day-schedules * {
+#day-schedules {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -118,67 +118,4 @@
     height: 90%;
     border: 2px solid #404040;
     border-radius: 0.5rem;
-}
-#day0-schedule {
-    display: flex;
-}
-.interactive-img {
-    display: none;
-}
-
-
-/* Changing schedule images when radio button is checked */
-input#friday:checked ~ #day-schedules #day1-schedule {
-    display: flex;
-}
-input#saturday:checked ~ #day-schedules #day2-schedule {
-    display: flex;
-}
-input#sunday:checked ~ #day-schedules #day3-schedule {
-    display: flex;
-}
-
-/* Making the default schedule disappear when the user changes days */
-input#friday:checked ~ #day-schedules #day0-schedule {
-    display: none;
-}
-input#saturday:checked ~ #day-schedules #day0-schedule {
-    display: none;
-}
-input#sunday:checked ~ #day-schedules #day0-schedule {
-    display: none;
-}
-
-
-/* Changing the friday button's color on check and uncheck */
-input#friday:checked ~ #friday-btn {
-    background-color:$third-color;
-}
-input#saturday:checked ~ #friday-btn {
-    background-color:$primary-color;
-}
-input#sunday:checked ~ #friday-btn {
-    background-color:$primary-color;
-}
-
-/* Changing the saturday button's color on check and uncheck */
-input#saturday:checked ~ #saturday-btn {
-    background-color:$third-color;
-}
-input#friday:checked ~ #saturday-btn {
-    background-color:$primary-color;
-}
-input#sunday:checked ~ #saturday-btn {
-    background-color:$primary-color;
-}
-
-/* Changing the sunday button's color on check / uncheck */
-input#sunday:checked ~ #sunday-btn {
-    background-color:$third-color;
-}
-input#friday:checked ~ #sunday-btn {
-    background-color:$primary-color;
-}
-input#saturday:checked ~ #sunday-btn {
-    background-color:$primary-color;
 }

@@ -13,8 +13,10 @@
     <title>Osheaga Tickets Page</title>
 	<!-- Linking Stylesheets -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<script src="../js/hamburger.js" defer></script>
+	<script src="../js/checkout.js" defer></script>
 </head>
 <body>
 
@@ -26,8 +28,21 @@
 				<h1>Osheaga 2024</h1>
 			</header>
 			
+			<ul id="pre-nav-options" class="nav navbar-nav navbar-right">
+				<li class="nav-item">
+					<a id="french" class="nav-link" href="../french/home.html">Français</a>
+				</li>
+				<!-- Hamburger Button -->
+				<button id="menu-toggle" class="navbar-toggler" type="button">
+					<i class="bi bi-list"></i>
+				</button>
+			</ul>
+			
 			<!-- landing page navigation options -->
-			<ul id="nav-options" class="nav navbar-nav navbar-right">
+			<ul id="nav-options" class="nav flex-column navbar-nav position-fixed nav-options">
+				<button id="nav-menu-toggle" class="navbar-toggler" type="button">
+					<i class="bi bi-list"></i>
+				</button>
 				<li class="nav-item">
 					<a id="home" class="nav-link" href="home.html">Home</a>
 				</li>
@@ -43,9 +58,6 @@
 				<li class="nav-item">
 					<a id="contact" class="nav-link" href="contact.html">Contact</a>
 				</li>
-				<li class="nav-item">
-					<a id="french" class="nav-link" href="../french/register.html">Français</a>
-				</li>
 		</div>
 	</nav>
 	
@@ -54,48 +66,50 @@
 		<img id="banner" src="../medias/osheaga_banner.jpeg" alt="Osheaga 2024 banner">
 
 		<!-- Registration form for the event -->
-        <section id="register">
+        <section id="register-area">
             <h2>Register for Osheaga 2024</h2>
             <form id="register-form">
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Full Name" required/>
+                <label id="full-name-label" for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Full Name"/>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Email" required/>
+                <label id="email-label" for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email"/>
 
-				<label for="event-day">Day:</label>
+				<label id="event-day-label" for="event-day">Day:</label>
 				<select id="event-day" name="event-day">
 					<option value="friday">Friday August Second</option>
 					<option value="saturday">Saturday August Third</option>
 					<option value="sunday">Sunday August Fourth</option>
 				</select>
 
-                <label for="tickets">Number of Tickets:</label>
-                <input type="number" id="tickets" name="tickets" placeholder="0" min="0" max="10" required/>
+                <label id="tickets-label" for="tickets">Number of Tickets:</label>
+                <input type="number" id="tickets" name="tickets" placeholder="0" min="0" max="10"/>
 
-				<label>Payment Method:</label>
-				<div id="payment-type">
-					<input type="radio" id="visa" value="visa" name="card-type"/>
-					<label for="visa"><img src="../medias/visa.svg" alt="Visa"></label>
-					<input type="radio" id="amex" value="amex" name="card-type"/>
-					<label for="amex"><img src="../medias/american-express.svg" alt="Amex"></label>
-					<input type="radio" id="mastercard" value="mastercard" name="card-type"/>
-					<label for="mastercard"><img src="../medias/mastercard.svg" alt="Mastercard"></label>
-				</div>
+				<label id="price-label" for="price">Price:</label>
+				<input type="text" id="price" name="price" placeholder="$0.00" readonly/>
 
-				<label for="card-number">Card Number:</label>
-				<input type="text" id="card-number" name="card-number" pattern="\d{4} \d{4} \d{4} \d{4}" placeholder="1234 5678 9012 3456" required/>
+				<label id="tax-label" for="tax">Tax:</label>
+				<input type="text" id="tax" name="tax" placeholder="$0.00" readonly/>
 
-				<label for="card-exp">Card Expiration:</label>
-				<input type="text" id="card-exp" name="card-exp" placeholder="01/25" pattern="(0[1-9]|1[0-2])\/\d{2}" required/>
+				<label id="total-price-label" for="total-price">Total Price:</label>
+				<input type="text" id="total-price" name="total-price" placeholder="$0.00" readonly/>
 
-				<label for="card-cvv">Card CVV:</label>
-				<input type="text" id="card-cvv" name="card-cvv" placeholder="123" pattern="\d{3,4}" required/>
+				<button id="firstBtn" type="button">Proceed to Payment</button>
+				
+				
+				<label id="card-number-label" for="card-number">Card Number:</label>
+				<input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456"/>
 
-				<label for="postal-code">Postal Code</label>
-				<input type="text" id="postal-code" name="postal-code" placeholder="A1B-2C3" required>
+				<label id="card-exp-label" for="card-exp">Card Expiration:</label>
+				<input type="text" id="card-exp" name="card-exp" placeholder="01/25"/>
 
-                <button type="submit">Buy Tickets</button>
+				<label id="card-cvv-label" for="card-cvv">Card CVV:</label>
+				<input type="text" id="card-cvv" name="card-cvv" placeholder="123"/>
+
+				<label id="postal-code-label" for="postal-code">Postal Code</label>
+				<input type="text" id="postal-code" name="postal-code" placeholder="A1B-2C3">
+
+                <button id="submitBtn" type="button">Buy Tickets</button>
             </form>
         </section>
     </main>

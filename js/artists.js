@@ -1,5 +1,5 @@
 // setting local storage for what day is selected
-window.localStorage.setItem("day", 1);
+localStorage.setItem("day", 1);
 
 // setting artists variable to change html content
 let artists = document.getElementById("artist-names");
@@ -31,7 +31,7 @@ document.getElementById("previous").addEventListener("click", () => nextDay(fals
 
 // function to change days, next day if true and previous day if false
 function nextDay (bool) {
-    let day = window.localStorage.getItem("day");
+    let day = localStorage.getItem("day");
 
     if (bool) {
         if (day < 3) {
@@ -43,7 +43,7 @@ function nextDay (bool) {
         }
     }
 
-    window.localStorage.setItem("day", day);
+    localStorage.setItem("day", day);
     updateArtists(day);
 }
 
@@ -58,4 +58,4 @@ function updateArtists (day) {
 }
 
 // initializing the page with the first day's artists
-updateArtists(window.localStorage.getItem("day"));
+updateArtists(localStorage.getItem("day"));

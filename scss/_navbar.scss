@@ -10,14 +10,36 @@
 }
 
 /* Overriding bootstrap to make the nav-options in a row */
-#nav-options {
+#pre-nav-options {
     flex-direction: row;
     float: right;
 }
 
+#nav-options {
+    flex-direction: row;
+    float: right;
+    top: 0;
+    right: -500px; /* Initially off-screen */
+    height: 100vh;
+    width: 250px;
+    padding-top: 100px;
+    transition: right 0.5s ease-in-out;
+    z-index: 1000;
+    background-color: $primary-color;
+}
+.show-menu {
+    right: 0 !important;
+}
+#menu-toggle {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 2rem;
+}
+
 /* Overriding bootstrap to change the text color and distance between links */
 .nav-link {
-    margin: 0rem 0.4rem;
+    margin: 0.2rem 0.4rem;
     padding: 0.2rem 0.4rem;
     color: #333333;
     border: 2px solid $primary-color;
@@ -34,6 +56,6 @@
     pointer-events: none;
     cursor: default;
     border: 2px solid #333333;
-    color: white;
-    background-color: $third-color;
+    color: black;
+    background-color: $secondary-color;
 }

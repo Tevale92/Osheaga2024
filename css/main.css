@@ -29,7 +29,7 @@
   margin: 1.5rem 1rem;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: auto auto;
   text-align: right;
 }
@@ -76,14 +76,38 @@ option {
 }
 
 /* Overriding bootstrap to make the nav-options in a row */
-#nav-options {
+#pre-nav-options {
   flex-direction: row;
   float: right;
 }
 
+#nav-options {
+  flex-direction: row;
+  float: right;
+  top: 0;
+  right: -500px; /* Initially off-screen */
+  height: 100vh;
+  width: 250px;
+  padding-top: 100px;
+  transition: right 0.5s ease-in-out;
+  z-index: 1000;
+  background-color: #56B5FA;
+}
+
+.show-menu {
+  right: 0 !important;
+}
+
+#menu-toggle {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2rem;
+}
+
 /* Overriding bootstrap to change the text color and distance between links */
 .nav-link {
-  margin: 0rem 0.4rem;
+  margin: 0.2rem 0.4rem;
   padding: 0.2rem 0.4rem;
   color: #333333;
   border: 2px solid #56B5FA;
@@ -101,8 +125,8 @@ option {
   pointer-events: none;
   cursor: default;
   border: 2px solid #333333;
-  color: white;
-  background-color: #D49ACB;
+  color: black;
+  background-color: #F3BA5C;
 }
 
 /* centering the div with the large schedule image */
@@ -175,7 +199,7 @@ option {
   width: 100%;
   margin: auto;
 }
-@media (max-width: 400px) {
+@media (max-width: 699px) {
   .medias {
     flex-direction: column;
   }
@@ -201,7 +225,7 @@ option {
     height: 22rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 699px) {
   #location {
     padding-bottom: 0rem;
   }
@@ -238,7 +262,7 @@ option {
     height: 22rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 699px) {
   #preview {
     margin-top: 0rem;
   }
@@ -254,7 +278,7 @@ option {
     width: 90%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 699px) {
   #preview video {
     margin-top: 1rem;
     width: 90%;
@@ -404,7 +428,7 @@ option {
 }
 
 /* Styling the schedule images and making the changing ones invisible */
-#day-schedules * {
+#day-schedules {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -416,79 +440,6 @@ option {
   height: 90%;
   border: 2px solid #404040;
   border-radius: 0.5rem;
-}
-
-#day0-schedule {
-  display: flex;
-}
-
-.interactive-img {
-  display: none;
-}
-
-/* Changing schedule images when radio button is checked */
-input#friday:checked ~ #day-schedules #day1-schedule {
-  display: flex;
-}
-
-input#saturday:checked ~ #day-schedules #day2-schedule {
-  display: flex;
-}
-
-input#sunday:checked ~ #day-schedules #day3-schedule {
-  display: flex;
-}
-
-/* Making the default schedule disappear when the user changes days */
-input#friday:checked ~ #day-schedules #day0-schedule {
-  display: none;
-}
-
-input#saturday:checked ~ #day-schedules #day0-schedule {
-  display: none;
-}
-
-input#sunday:checked ~ #day-schedules #day0-schedule {
-  display: none;
-}
-
-/* Changing the friday button's color on check and uncheck */
-input#friday:checked ~ #friday-btn {
-  background-color: #D49ACB;
-}
-
-input#saturday:checked ~ #friday-btn {
-  background-color: #56B5FA;
-}
-
-input#sunday:checked ~ #friday-btn {
-  background-color: #56B5FA;
-}
-
-/* Changing the saturday button's color on check and uncheck */
-input#saturday:checked ~ #saturday-btn {
-  background-color: #D49ACB;
-}
-
-input#friday:checked ~ #saturday-btn {
-  background-color: #56B5FA;
-}
-
-input#sunday:checked ~ #saturday-btn {
-  background-color: #56B5FA;
-}
-
-/* Changing the sunday button's color on check / uncheck */
-input#sunday:checked ~ #sunday-btn {
-  background-color: #D49ACB;
-}
-
-input#friday:checked ~ #sunday-btn {
-  background-color: #56B5FA;
-}
-
-input#saturday:checked ~ #sunday-btn {
-  background-color: #56B5FA;
 }
 
 /* Setting width of entire page and grid layout */
@@ -578,8 +529,11 @@ input#saturday:checked ~ #sunday-btn {
 }
 
 /* Responsive margin change for switching to flex column */
+#register-area {
+  width: 50%;
+}
 @media (max-width: 950px) {
-  #register {
+  #register-area {
     margin-top: 6%;
   }
 }
@@ -592,36 +546,6 @@ input#saturday:checked ~ #sunday-btn {
 /* centering form submit button */
 #register-form button {
   grid-column: 1/span 2;
-}
-
-/* styling payment section of the form */
-#payment-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-}
-
-#payment-type input {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: -9999px;
-}
-
-#payment-type label img {
-  width: 90%;
-}
-
-#payment-type label :hover {
-  cursor: pointer;
-}
-
-#payment-type input:checked + label img {
-  background-color: black;
-  border: 2px solid black;
-  border-radius: 2rem;
 }
 
 /* Styling the main section of the contact page */
@@ -654,7 +578,7 @@ input#saturday:checked ~ #sunday-btn {
 
 /* Responsive margin change for switching to flex column */
 @media (max-width: 950px) {
-  #contact {
+  #contact-area {
     margin-top: 6%;
   }
 }
