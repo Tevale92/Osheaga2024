@@ -27,13 +27,15 @@
 			<header id="header" class="navbar-brand">
 				<h1>Osheaga 2024</h1>
 			</header>
-			
-			<ul id="pre-nav-options" class="nav navbar-nav navbar-right">
+
+			<ul id="pre-nav-options" class="nav navbar-nav navbar-right d-flex align-items-center">
 				<li class="nav-item">
-					<a id="french" class="nav-link" href="../french/home.html">Français</a>
+					<a id="language" href="../french/register.html">
+						<img src="../medias/french.png" alt="Français">
+					</a>
 				</li>
 				<!-- Hamburger Button -->
-				<button id="menu-toggle" class="navbar-toggler" type="button">
+				<button id="menu-toggle" class="navbar-toggler d-flex align-items-center" type="button">
 					<i class="bi bi-list"></i>
 				</button>
 			</ul>
@@ -41,7 +43,7 @@
 			<!-- landing page navigation options -->
 			<ul id="nav-options" class="nav flex-column navbar-nav position-fixed nav-options">
 				<button id="nav-menu-toggle" class="navbar-toggler" type="button">
-					<i class="bi bi-list"></i>
+					<i class="bi bi-x-lg"></i>
 				</button>
 				<li class="nav-item">
 					<a id="home" class="nav-link" href="home.html">Home</a>
@@ -56,8 +58,9 @@
 					<a id="register" class="nav-link" href="register.html">Register</a>
 				</li>
 				<li class="nav-item">
-					<a id="contact" class="nav-link" href="contact.html">Contact</a>
+					<a id="contact" class="nav-link" href="contact.html">Feedback</a>
 				</li>
+			</ul>
 		</div>
 	</nav>
 	
@@ -77,9 +80,9 @@
 
 				<label id="event-day-label" for="event-day">Day:</label>
 				<select id="event-day" name="event-day">
-					<option value="friday">Friday August Second</option>
-					<option value="saturday">Saturday August Third</option>
-					<option value="sunday">Sunday August Fourth</option>
+					<option value="Friday August Second">Friday August Second</option>
+					<option value="Saturday August Third">Saturday August Third</option>
+					<option value="Sunday August Fourth">Sunday August Fourth</option>
 				</select>
 
                 <label id="tickets-label" for="tickets">Number of Tickets:</label>
@@ -113,6 +116,15 @@
             </form>
         </section>
     </main>
+
+	<div id="modal">
+		<!-- Modal content -->
+		<div id="receipt-modal">
+		  <span id="close">&times;</span>
+		  <p id="receipt">
+		  </p>
+		</div>  
+	</div>
 
 	<!-- Footer section -->
     <footer class="footer">

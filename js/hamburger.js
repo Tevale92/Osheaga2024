@@ -4,7 +4,10 @@ let language = window.location.pathname.split("/").slice(-2)[0];
 localStorage.setItem("currentNav", address);
 localStorage.setItem("currentLang", language);
 
-document.getElementById(address).classList.add("disable-link");
+if (address === "friday" || address === "saturday" || address === "sunday") {
+} else {
+    document.getElementById(address).classList.add("disable-link");
+}
 
 document.getElementById("menu-toggle").addEventListener("click", function () {
     let navMenu = document.getElementById("nav-options");

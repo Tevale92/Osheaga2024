@@ -1,4 +1,19 @@
-tickets purchasing form with input validation
-navbar hamburger dropdown
-artist lineup onclick change
-event schedule onclick change
+1- Navbar active page highlighting.
+
+2- Navbar dropdown menu, *modal popup on form completion with purchase information*, arrows to go through schedule images, arrows to go through artists lineup.
+
+3- Artists names array to not have lots of data held in html, html element arrays for payment form to manipulate the form elements when the user completes the first step and moves to the payment section of the form.
+
+4- Changing the display style of form elements, changing style of navbar options to toggle the dropdown, changing the innerHTML of the div displaying schedules.
+
+5- Payment form input validation, *feedback form validation*.
+
+6- 
+
+7- *Storing feedback form data and dynamically displaying the feedback.*
+
+8- *Accessibility review with lighthouse* https://developer.chrome.com/docs/lighthouse/overview#devtools
+
+9- *Weather information with api* https://www.weatherapi.com
+
+10- *Use JQuery to implement live weather forecast*
