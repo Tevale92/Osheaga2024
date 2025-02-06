@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Osheaga Support Page.">
     <meta name="author" content="David Demers">
-    <meta name="keywords" content="Osheaga Contact, osheaga contact
+    <meta name="keywords" content="Osheaga Feedback, osheaga feedback
 			Osheaga Support, osheaga support, Osheaga Help, osheaga help" >
     <title>Osheaga Support Page</title>
 	<!-- Linking Stylesheets -->
@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="stylesheet" href="../css/main.css">
 	<script src="../js/hamburger.js" defer></script>
+	<script src="../js/feedback.js" defer></script>
 </head>
 <body>
 
@@ -25,9 +26,11 @@
 				<h1>Osheaga 2024</h1>
 			</header>
 
+			<!-- Initial navbar state -->
 			<ul id="pre-nav-options" class="nav navbar-nav navbar-right d-flex align-items-center">
+				<!-- Change languages button -->
 				<li class="nav-item">
-					<a id="language" href="../french/contact.html">
+					<a id="language" href="../french/feedback.html">
 						<img src="../medias/french.png" alt="Français">
 					</a>
 				</li>
@@ -55,39 +58,53 @@
 					<a id="register" class="nav-link" href="register.html">Register</a>
 				</li>
 				<li class="nav-item">
-					<a id="contact" class="nav-link" href="contact.html">Feedback</a>
+					<a id="feedback" class="nav-link" href="feedback.html">Feedback</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
 	
 	<!-- Main section -->
-	<main class="contact-page">
+	<main class="feedback-page">
         <img id="banner" src="../medias/osheaga_banner.jpeg" alt="Osheaga 2024 banner">
 
-		<!-- Contact form to contact the event hosts -->
-        <section id="contact-area">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
+		<!-- Feedback form to feedback the event hosts -->
+        <section id="feedback-area">
+            <h2>Feedback</h2>
+            <form id="feedback-form">
                 <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Full Name" required/>
+                <input type="text" id="full-name" placeholder="Full Name"/>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="full-name" placeholder="Email" required/>
+                <input type="email" id="email" name="email" placeholder="Email"/>
 
-				<label for="reason">Reason for Contacting:</label>
-				<input type="text" id="reason" name="reason" placeholder="Reason"/>
+				<label for="rating">Ratting out of 5:</label>
+				<input type="number" id="rating" name="rating" placeholder="0" min="0" max="5"/>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message Here" rows="3" cols="40" required></textarea>
+                <label for="review">Review (Optional):</label>
+                <textarea id="review" name="review" placeholder="Your Review Here" rows="3" cols="40"></textarea>
 
-                <button type="submit">Submit Message</button>
+                <button id="submitBtn" type="button">Submit Review</button>
             </form>
         </section>
     </main>
 
+	<div id="reviews">
+		<h2>Reviews</h2>
+		<div id="reviews-list">
+		</div>
+	</div>
+
+	<div id="modal">
+		<div id="modal-content">
+		  <span id="close">&times;</span>
+		  <p id="modal-msg">
+		  </p>
+		</div>  
+	</div>
+
 	<!-- Footer section -->
-    <footer id="contact-footer" class="footer">
+    <footer id="feedback-footer" class="footer">
         <p>&copy; 2024 Osheaga. All Rights Reserved.</p>
     </footer>
 </body>

@@ -1,19 +1,61 @@
-1- Navbar active page highlighting.
+1. Project setup and Navigation
 
-2- Navbar dropdown menu, *modal popup on form completion with purchase information*, arrows to go through schedule images, arrows to go through artists lineup.
+-This project is individual
+-Navbar active page highlighting, this feature shows the user what page they are currently on and disables the link to the current page to avoid miss-clicking when trying to change pages.
 
-3- Artists names array to not have lots of data held in html, html element arrays for payment form to manipulate the form elements when the user completes the first step and moves to the payment section of the form.
 
-4- Changing the display style of form elements, changing style of navbar options to toggle the dropdown, changing the innerHTML of the div displaying schedules.
+2. Interactive features with Javascript
 
-5- Payment form input validation, *feedback form validation*.
+-Navbar dropdown menu, this allows people with smaller screen to easily navigate the website without having the navbar options take up too much space on the screen.
+-Modal popup on form completion with purchase information, this confirms the user that their purchase was done successfully and gives a brief overview of the purchase details.
+-Arrows to go through schedule images, this adds interactivity for the user to change the days of the schedule without having a button for each day (previous design).
+-Arrows to go through artists lineup, this feature removes the need to have 3 large elements to hold all the artists name and instead separates them individually and allows the user to interactively go through the artists.
 
-6- 
 
-7- *Storing feedback form data and dynamically displaying the feedback.*
+3. Using arrays and loops for dynamic content
 
-8- *Accessibility review with lighthouse* https://developer.chrome.com/docs/lighthouse/overview#devtools
+-Artists names array, this allows me to not have lots of data held in the html page and easily modify the content of the html elements
+-Html element arrays for the payment form, this is to easily manipulate the form elements, when the user completes the first step and moves to the payment section of the form, some of the elements become hidden.
+-Regex arrays, this allows easy input validation in the forms.
 
-9- *Weather information with api* https://www.weatherapi.com
 
-10- *Use JQuery to implement live weather forecast*
+4. DOM Manipulation in action
+
+-Changing the display style of form elements, hiding and displaying certain elements in the form when the customer is filling out the first and second part of the form.
+-Changing style of navbar options to toggle the dropdown, hiding and displaying the navbar link options when the hamburger button is pressed.
+-Appending reviews to the div of the reviews-list, creating and appending filled out reviews to be added to the reviews section of the page.
+
+
+5. Form validation & error handling
+
+-Payment form input validation, changes the border color of the inputs for valid/invalid inputs in real-time.
+-Feedback form validation, changes the border color of the inputs for valid/invalid inputs in real-time.
+-Payment form error message, shows the user an error message if the users tries to submit the form with an invalid input.
+-Feedback form error message, shows the user an error message if the users tries to submit the form with an invalid input.
+
+
+6. Dynamically updating a table
+
+
+7. Feedback form with interactive selection.
+
+-Feedback form submission storage, create unique local storage for every submission.
+-Dynamically display the reviews if there is more than one, displays all the reviews in the local storage.
+-Display the rating with start, use bootstrap icons to display the review's star rating.
+
+
+8. Team-based UI/UX evaluation
+
+-All pages have resizable elements.
+-All pages have interactive content for the user that does not encounter bugs.
+-Accessibility review with lighthouse in lighthouse folder.
+
+
+9. Fetching & displaying external data (AJAX)
+
+-Weather information with api, use weatherapi.com to fetch current weather information in Montreal.
+
+
+10. Enhancing UI with JavaScript libraries
+
+-Used jquery to make an ajax request, used jquery to create an api request to weatherapi.com

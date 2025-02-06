@@ -112,3 +112,15 @@
         margin-top: 1rem;
     }
 }
+
+/* Stlying the weather section */
+#weather {
+    @include bubble;
+    @include mdw-padding;
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+#weather h2 {
+    margin-bottom: 1rem;
+}

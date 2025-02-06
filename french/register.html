@@ -58,7 +58,7 @@
 					<a id="register" class="nav-link" href="register.html">Billets</a>
 				</li>
 				<li class="nav-item">
-					<a id="contact" class="nav-link" href="contact.html">Revue</a>
+					<a id="contact" class="nav-link" href="feedback.html">Revue</a>
 				</li>
 			</ul>
 		</div>
@@ -73,10 +73,10 @@
             <h2>Inscrivez-Vous à Osheaga 2024</h2>
             <form id="register-form">
                 <label id="full-name-label" for="full-name">Nom Complet:</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Full Name"/>
+                <input type="text" id="full-name" name="full-name" placeholder="Nom Complet"/>
 
                 <label id="email-label" for="email">Courriel:</label>
-                <input type="email" id="email" name="email" placeholder="Email"/>
+                <input type="email" id="email" name="email" placeholder="Courriel"/>
 
 				<label id="event-day-label" for="event-day">Journée:</label>
 				<select id="event-day" name="event-day">
@@ -116,6 +116,15 @@
             </form>
         </section>
     </main>
+
+	<!-- Modal popup for the receipt -->
+	<div id="modal">
+		<div id="receipt-modal">
+		  <span id="close">&times;</span>
+		  <p id="receipt">
+		  </p>
+		</div>  
+	</div>
 
 	<!-- Footer section -->
     <footer class="footer">

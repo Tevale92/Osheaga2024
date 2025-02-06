@@ -11,7 +11,7 @@ Extra info:
 
 The landing page and schedule page have links to the tickets page embedded in advertising elements.
 The schedule pictures are clickable and bring the user to a page with only the schedule so the user can better see the schedule.
-There is a contact page for the user to submit a message to the event organizers.
+There is a feedback page for the user to submit a message to the event organizers.
 All pages are fully resizable for all pixel widths and I accomplish this by using percentages for widths and height as well as media queries which change elements from flex-row to flex-column and add/subtract margin/padding;
 Every page on the website can be translated to french.
 
@@ -27,37 +27,42 @@ File Structure :
 	----main.css
 	----main.css.map
 ////////english
-	----Osheaga_artists.html
-	----Osheaga_contact.html
-	----Osheaga_friday.html
-	----Osheaga_home.html
-	----Osheaga_register.html
-	----Osheaga_saturday.html
-	----Osheaga_schedule.html
-	----Osheaga_sunday.html
+	----artists.html
+	----feedback.html
+	----friday.html
+	----home.html
+	----register.html
+	----saturday.html
+	----schedule.html
+	----sunday.html
 ////////french
-	----Osheaga_artists.html
-	----Osheaga_contact.html
-	----Osheaga_friday.html
-	----Osheaga_home.html
-	----Osheaga_register.html
-	----Osheaga_saturday.html
-	----Osheaga_schedule.html
-	----Osheaga_sunday.html
+	----artists.html
+	----feedback.html
+	----friday.html
+	----home.html
+	----register.html
+	----saturday.html
+	----schedule.html
+	----sunday.html
+////////js
+	----artist.js
+	----checkout.js
+	----feedback.js
+	----hamburger.js
+	----schedule.js
 ////////medias
-	----american-express.svg
 	----day1_schedule.jpg
 	----day2_schedule.jpg
 	----day3_schedule.jpg
+	----english.png
 	----festival_pic.jpeg
-	----mastercard.svg
-	----osheaga_banner.jpeg
-	----osheaga_promo.mp4
-	----visa.svg
+	----french.png
+	----banner.jpeg
+	----promo.mp4
 ////////scss
 	----_artists.scss
 	----_big-schedule.scss
-	----_contact.scss
+	----_feedback.scss
 	----_footer.scss
 	----_form.scss
 	----_home.scss
@@ -69,12 +74,12 @@ File Structure :
 	----main.scss
 ////////Wireframe v4(Desktop and Mobile)
 	----desktop_artists.png
-	----desktop_contact.png
+	----desktop_feedback.png
 	----desktop_home.png
 	----desktop_register.png
 	----desktop_schedule.png
 	----mobile_artists.png
-	----mobile_contact.png
+	----mobile_feedback.png
 	----mobile_home.png
 	----mobile_register.png
-	----mobile_contact.png
+	----mobile_feedback.png

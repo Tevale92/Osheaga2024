@@ -177,10 +177,10 @@ submit.addEventListener("click", function () {
         receipt.innerHTML = 
         `<em>Thank you for your purchase!</em>
 		<br>We can't wait to see you in person.
-        <br><br>Here is your purchase information.
+        <br><br>Here is your purchase information:
         <br>Client Name: ${fullName.value}
         <br>Email: ${email.value}
-        <br>Ticket Days: ${eventDay.value}
+        <br>Ticket Day: ${eventDay.value}
         <br>Number of Tickets: ${tickets.value}
         `;
     } else {
@@ -211,16 +211,16 @@ function testPattern (pattern, testElement) {
 // declaring a var for the modal receipt
 let modal = document.getElementById("modal");
 let receipt = document.getElementById("receipt");
-let span = document.getElementsById("close");
+let span = document.getElementById("close");
 
 // When the user clicks on <span> (x), close the modal
 span.addEventListener("click", function() {
   document.getElementById("register-form").submit();
-})
+});
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener("click", function(event) {
   if (event.target == modal) {
     document.getElementById("register-form").submit();
   }
-})
+});
